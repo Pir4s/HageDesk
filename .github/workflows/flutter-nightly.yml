@@ -9,6 +9,9 @@ on:
 jobs:
   run-flutter-nightly-build:
     uses: ./.github/workflows/flutter-build.yml
+    # Forks default to a read-only GITHUB_TOKEN; nested jobs need write to publish the release.
+    permissions:
+      contents: write
     secrets: inherit
     with:
       upload-artifact: true
