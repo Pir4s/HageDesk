@@ -1,18 +1,14 @@
 name: Flutter Nightly Build
 
+# HageDesk: this workflow is already registered in the fork's Actions list, so it runs the
+# fast Windows-only build. The upstream full build (all platforms) and its nightly schedule are dropped.
 on:
-  schedule:
-    # schedule build every night
-    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
-  run-flutter-nightly-build:
-    uses: ./.github/workflows/flutter-build.yml
+  run-hagedesk-windows-build:
+    uses: ./.github/workflows/hagedesk-windows.yml
     # Forks default to a read-only GITHUB_TOKEN; nested jobs need write to publish the release.
     permissions:
       contents: write
     secrets: inherit
-    with:
-      upload-artifact: true
-      upload-tag: "nightly"
