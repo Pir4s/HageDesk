@@ -1,4 +1,4 @@
-# HageDesk: fast build of the Windows x64 installer only.
+# HageDesk: fast build of the Windows x64 installer only (Actions > HageDesk Windows Build > Run workflow).
 # Derived from flutter-build.yml (build-for-windows-flutter job); keep in sync when updating from upstream.
 name: HageDesk Windows Build
 
