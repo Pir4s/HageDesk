@@ -20,6 +20,8 @@ O **HageDesk** é o aplicativo de acesso remoto da Hage. Ele é baseado no [Rust
 |---|---|
 | [**hagedesk-1.5.1-x86_64.msi**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.msi) | Instalador para Windows (recomendado) |
 | [**hagedesk-1.5.1-x86_64.exe**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.exe) | Executável que roda sem instalar |
+| [**hagedesk-1.5.1-aarch64.apk**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-aarch64.apk) | Android (celulares ARM64) |
+| [**hagedesk-1.5.1-x86_64.deb**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.deb) | Linux: Ubuntu, Debian, Mint (`sudo apt install ./hagedesk-1.5.1-x86_64.deb`) |
 
 Todas as versões ficam em [Releases](https://github.com/Pir4s/rustdesk/releases/tag/hagedesk).
 
@@ -34,7 +36,10 @@ O instalador é compilado pelo GitHub Actions. Não é preciso instalar nada no 
 2. Clique em **Run workflow**, escolha a branch `master` ou `hagedesk` e confirme.
 3. Aguarde de 30 a 60 minutos. O instalador novo aparece em [Releases → hagedesk](https://github.com/Pir4s/rustdesk/releases/tag/hagedesk).
 
-O build gera apenas a versão para **Windows x64** (workflow [`hagedesk-windows.yml`](.github/workflows/hagedesk-windows.yml)).
+O build gera as versões para **Windows x64**, **Android ARM64** e **Linux x64 (.deb)**, em paralelo (workflow [`hagedesk-windows.yml`](.github/workflows/hagedesk-windows.yml)).
+
+> [!Note]
+> O APK do Android ainda é assinado com uma chave temporária, gerada a cada build. Para atualizar o app no celular, desinstale a versão anterior antes de instalar a nova.
 
 ## O que foi personalizado
 
@@ -44,6 +49,8 @@ O build gera apenas a versão para **Windows x64** (workflow [`hagedesk-windows.
 | Dados do executável no Windows | `Cargo.toml`, `flutter/windows/runner/Runner.rc`, `flutter/windows/runner/main.cpp` |
 | Ícones e logo | `res/*.png`, `res/*.ico`, `flutter/assets/icon.*`, `flutter/assets/logo.png`, `flutter/windows/runner/resources/app_icon.ico` |
 | Instalador MSI | `res/msi/preprocess.py`, `.github/workflows/flutter-build.yml` |
+| Android (nome, ícones, id `br.com.hagelab.hagedesk`) | `flutter/android/app/build.gradle`, `flutter/android/app/src/main/AndroidManifest.xml`, `flutter/android/app/src/main/res/` |
+| Linux (pacote `hagedesk`) | `flutter/linux/my_application.cc`, `res/hagedesk/rebrand-deb.sh` |
 | Build rápido | `.github/workflows/hagedesk-windows.yml`, `.github/workflows/flutter-nightly.yml` |
 
 ## Atualizar com o RustDesk
