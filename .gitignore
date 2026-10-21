@@ -60,3 +60,7 @@ flutter/web/
 /third_party/libdrmtap/
 # Local git worktrees
 .worktrees/
+
+# HageDesk branding
+!flutter/assets/icon.png
+!flutter/assets/logo.png
