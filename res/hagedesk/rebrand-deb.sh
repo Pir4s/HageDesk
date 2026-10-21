@@ -53,7 +53,7 @@ done
 # Package metadata: keep upstream's Maintainer as the original author.
 sed -i \
   -e 's/^Package: rustdesk$/Package: hagedesk/' \
-  -e 's|^Homepage: .*|Homepage: https://github.com/Pir4s/rustdesk|' \
+  -e 's|^Homepage: .*|Homepage: https://github.com/Pir4s/HageDesk|' \
   -e 's/^Description: .*/Description: HageDesk - acesso remoto da Hage (baseado no RustDesk)./' \
   DEBIAN/control
 

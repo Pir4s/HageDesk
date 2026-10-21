@@ -18,12 +18,12 @@ O **HageDesk** é o aplicativo de acesso remoto da Hage. Ele é baseado no [Rust
 
 | Arquivo | Uso |
 |---|---|
-| [**hagedesk-1.5.1-x86_64.msi**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.msi) | Instalador para Windows (recomendado) |
-| [**hagedesk-1.5.1-x86_64.exe**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.exe) | Executável que roda sem instalar |
-| [**hagedesk-1.5.1-aarch64.apk**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-aarch64.apk) | Android (celulares ARM64) |
-| [**hagedesk-1.5.1-x86_64.deb**](https://github.com/Pir4s/rustdesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.deb) | Linux: Ubuntu, Debian, Mint (`sudo apt install ./hagedesk-1.5.1-x86_64.deb`) |
+| [**hagedesk-1.5.1-x86_64.msi**](https://github.com/Pir4s/HageDesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.msi) | Instalador para Windows (recomendado) |
+| [**hagedesk-1.5.1-x86_64.exe**](https://github.com/Pir4s/HageDesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.exe) | Executável que roda sem instalar |
+| [**hagedesk-1.5.1-aarch64.apk**](https://github.com/Pir4s/HageDesk/releases/download/hagedesk/hagedesk-1.5.1-aarch64.apk) | Android (celulares ARM64) |
+| [**hagedesk-1.5.1-x86_64.deb**](https://github.com/Pir4s/HageDesk/releases/download/hagedesk/hagedesk-1.5.1-x86_64.deb) | Linux: Ubuntu, Debian, Mint (`sudo apt install ./hagedesk-1.5.1-x86_64.deb`) |
 
-Todas as versões ficam em [Releases](https://github.com/Pir4s/rustdesk/releases/tag/hagedesk).
+Todas as versões ficam em [Releases](https://github.com/Pir4s/HageDesk/releases/tag/hagedesk).
 
 > [!Note]
 > O instalador ainda não tem assinatura digital, então o Windows pode exibir o aviso **"O Windows protegeu o computador"**. Clique em **Mais informações → Executar assim mesmo**.
@@ -32,9 +32,9 @@ Todas as versões ficam em [Releases](https://github.com/Pir4s/rustdesk/releases
 
 O instalador é compilado pelo GitHub Actions. Não é preciso instalar nada no computador.
 
-1. Abra [Actions → Flutter Nightly Build](https://github.com/Pir4s/rustdesk/actions/workflows/flutter-nightly.yml).
+1. Abra [Actions → Flutter Nightly Build](https://github.com/Pir4s/HageDesk/actions/workflows/flutter-nightly.yml).
 2. Clique em **Run workflow**, escolha a branch `master` ou `hagedesk` e confirme.
-3. Aguarde de 30 a 60 minutos. O instalador novo aparece em [Releases → hagedesk](https://github.com/Pir4s/rustdesk/releases/tag/hagedesk).
+3. Aguarde de 30 a 60 minutos. O instalador novo aparece em [Releases → hagedesk](https://github.com/Pir4s/HageDesk/releases/tag/hagedesk).
 
 O build gera as versões para **Windows x64**, **Android ARM64** e **Linux x64 (.deb)**, em paralelo (workflow [`hagedesk-windows.yml`](.github/workflows/hagedesk-windows.yml)).
 
